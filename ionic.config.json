@@ -1,0 +1,7 @@
+{
+  "name": "teste-moedas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
