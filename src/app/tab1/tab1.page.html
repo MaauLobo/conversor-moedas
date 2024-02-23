@@ -1,7 +1,9 @@
+<!-- moedas.page.html -->
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Conversor de Moedas
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +11,43 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Conversor de Moedas</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+  <section class="container-moedas">
+    <ion-item>
+      <ion-label>Valor a Converter</ion-label>
+      <ion-input type="number" [(ngModel)]="valorEntrada"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Moeda de Origem</ion-label>
+      <ion-select [(ngModel)]="moedaOrigem">
+        <ion-select-option *ngFor="let moeda of moedasDisponiveis" [value]="moeda">{{ moeda }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <div class="revert-buttom">
+      <ion-button fill="outline" (click)="revert()" class="revertBtn">
+        <ion-icon slot="icon-only" name="repeat-outline"></ion-icon>
+      </ion-button>
+    </div>
+    
+    
+    
+    <ion-item>
+      <ion-label>Moeda de Destino</ion-label>
+      <ion-select [(ngModel)]="moedaDestino">
+        <ion-select-option *ngFor="let moeda of moedasDisponiveis" [value]="moeda">{{ moeda }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-button expand="full" (click)="converter()">Converter</ion-button>
+    
+    <ion-item *ngIf="resultado !== undefined">
+      <ion-label>Resultado</ion-label>
+      <ion-text>{{ resultado | number: '1.2-2' }}</ion-text>
+    </ion-item>
+  </section>
+  

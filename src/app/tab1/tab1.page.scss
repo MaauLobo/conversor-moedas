@@ -1,0 +1,25 @@
+.container-moedas {
+    margin-top: 300px; /* Adiciona 20 pixels de espaço acima dos itens */
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+
+.revert-buttom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-item {
+    max-width: 70%; /* Defina a largura máxima desejada */
+    margin: 0 auto; /* Centraliza o item na tela */
+  }
+
+
+  ion-button {
+    max-width: 70%; /* Defina a largura máxima desejada para os botões */
+    margin: 0 auto; /* Centraliza os botões na tela */
+  }
