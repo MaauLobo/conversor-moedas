@@ -28,7 +28,7 @@ export class Tab1Page implements OnInit {
         if (data && data.conversion_rates) {
           this.moedasDisponiveis = Object.keys(data.conversion_rates);
           this.moedaOrigem = this.moedasDisponiveis[0];
-          this.moedaDestino = this.moedasDisponiveis[1];
+          this.moedaDestino = this.moedasDisponiveis[146];
         } else {
           console.error('Resposta da API não contém as taxas de conversão esperadas.');
         }
