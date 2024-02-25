@@ -1,9 +1,18 @@
-// Ionic Variables and Theming. For more info, please see:
-// http://ionicframework.com/docs/theming/
 
-/** Ionic CSS Variables **/
 :root {
-  /** primary **/
+
+  
+  
+$cor-de-fundo: #ffffff;
+$cor-do-texto: #000000;
+
+// Estilo para o modo escuro
+$cor-de-fundo-escuro: #333333;
+$cor-do-texto-escuro: #ffffff;
+  
+  
+  
+  
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;

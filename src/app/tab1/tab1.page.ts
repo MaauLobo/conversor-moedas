@@ -44,6 +44,8 @@ export class Tab1Page implements OnInit {
     // Adicione os símbolos para as outras moedas
   };
 
+  modoEscuro = false;
+
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
@@ -113,4 +115,10 @@ export class Tab1Page implements OnInit {
   getMoedaSimbolo(moeda: string): string {
     return this.moedasSimbolos[moeda] || '';
   }
+  
+  toggleModo() {
+    this.modoEscuro = !this.modoEscuro;
+    document.body.classList.toggle('dark-mode', this.modoEscuro);
+  }
+
 }
