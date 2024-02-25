@@ -45,9 +45,9 @@
     
     <ion-button expand="full" (click)="converter()">Converter</ion-button>
     
-    <ion-item *ngIf="resultado !== undefined">
+    <ion-item *ngIf="resultado !== undefined" class="animated-item resultado-animation">
       <ion-label>Resultado</ion-label>
-      <ion-text>{{ resultado | number: '1.2-2' }}</ion-text>
+      <ion-text>{{ moedaDestinoSimbolo }} {{ resultado | number: '1.2-2' }}</ion-text>
     </ion-item>
   </section>
   
